@@ -42,9 +42,18 @@ TargetPractice.config(function($stateProvider, $urlRouterProvider) {
             template: 'Targeting header from child state'
           }
         }
-      }
-
-        );
+      })
+      .state("parent.child.grandchild",{
+        url: 'grandchild',
+        views: {
+          '@parent.child':{
+             templateUrl: "/js/templates/grandchildren.html"
+          },
+          '@parent.child.grandchild':{
+            
+          }
+        }
+    });
 
   $urlRouterProvider.otherwise('/');
 });
