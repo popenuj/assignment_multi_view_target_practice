@@ -17,7 +17,8 @@ TargetPractice.config(function($stateProvider, $urlRouterProvider) {
             template: 'Targeting header from parent state.'
           }
         }
-      });
+      })
+      .state('parent.child');
 
   $urlRouterProvider.otherwise('/');
 });
