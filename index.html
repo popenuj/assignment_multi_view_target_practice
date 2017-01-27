@@ -3,7 +3,6 @@
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/screen.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Muli:400,400i" rel="stylesheet">
     <meta charset="utf-8"></meta>
     <title>Target Practice</title>
@@ -20,7 +19,17 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><a ui-sref="/">Home</a></li>
+      </ul>
+    </nav>
+    <h1>Multi-View Target Practice</h1>
+    <span ui-view="main-header"></span>
+    <h2>Parent</h2>
 
+    <div ui-view></div>
+    <div ui-view="named-parent"></div>
   </body>
 
   <!-- scripts -->
